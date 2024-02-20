@@ -1,23 +1,42 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
 body {
-	font-family: 'Poppins', sans-serif;
-	color: #ff8585;
+	font-family: Arial, Helvetica, sans-serif;
 	text-align: center;
 	background: url('./background.jpg');
 	background-size: cover;
+	color: #860000;
 }
 
 #board {
 	width: 540px;
 	height: 540px;
 	/* background-color: green; */
+
 	margin: 0 auto;
 	display: flex;
 	flex-wrap: wrap;
 
 	background: url('./soil.png');
 	background-size: cover;
-	border: 3px solid rgb(125, 64, 0);
+	border: 3px solid rgb(134, 40, 0);
 	border-radius: 25px;
+}
+
+#board div {
+	/* board = 540 x 540, divide into 3x3 tiles --> 180 x 180 per div */
+	width: 180px;
+	height: 180px;
+	background-image: url('./pipe.png');
+	background-size: cover;
+}
+
+#board div img {
+	/* all img tags inside tiles */
+	width: 100px;
+	height: 100px;
+
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-drag: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
 }
